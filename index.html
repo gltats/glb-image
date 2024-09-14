@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Honk&display=swap"
+		rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Honk&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+		rel="stylesheet">
+	<title>Motorola Razr V3 Light Pink</title>
+	<style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			font-family: 'Gluten', sans-serif;
+			overflow-x: hidden;
+			position: relative;
+		}
+
+		p {
+			font-family: 'Roboto Mono', monospace;
+			color: aliceblue;
+		}
+
+		nav {
+			font-family: 'Roboto Mono', monospace;
+		}
+
+		.section h1,
+		h2 {
+			color: #ff408c;
+		}
+
+
+		body::before {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url('background.jpg') no-repeat fixed center/cover;
+			opacity: 0.3;
+			z-index: -1;
+		}
+
+		.title {
+			font-family: 'Honk', sans-serif;
+			font-size: 3rem;
+		}
+
+		.subtitle {
+			font-family: 'Gluten', sans-serif;
+			font-size: 1.5rem;
+			color: #ff408c;
+		}
+
+		.section {
+			height: 100vh;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			position: relative;
+		}
+
+		.col-6 {
+			margin-top: 2rem;
+			text-align: left;
+		}
+
+		.col-2 p {
+			color: aliceblue;
+			font-size: 1.2rem;
+			margin-top: 3rem;
+		}
+
+
+
+
+		#phone-container {
+			width: 100%;
+			height: 500px;
+			position: relative;
+		}
+
+		button {
+			background: #ff408c;
+			color: white;
+			border: none;
+			padding: 0.5rem;
+			font-size: 16px;
+			border-radius: 8px;
+			cursor: pointer;
+			margin-top: 0.1rem;
+			transition: background 0.3s ease;
+		}
+
+		button:hover {
+			background: #ff70b0;
+		}
+
+		/* Parallax effect section */
+		.parallax {
+			background: url('pink.jpg') no-repeat fixed center/cover;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			text-align: center;
+			padding: 0 20px;
+		}
+
+		.history {
+			background: rgba(45, 24, 42, 0.5);
+			padding-top: 2rem;
+			border-radius: 2rem;
+		}
+
+		.snake-section {
+			background: #f687b4;
+			color: white;
+			padding: 50px 20px;
+			text-align: center;
+		}
+
+		.snake-section button {
+			background: white;
+			color: #ff408c;
+			border: none;
+			padding: 10px 20px;
+			font-size: 16px;
+			border-radius: 8px;
+			cursor: pointer;
+			margin-top: 20px;
+			transition: background 0.3s ease;
+		}
+
+		.ringtone-button {
+			font-size: 24px;
+			padding: 15px 25px;
+			background: #ff408c;
+			color: white;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		.card {
+			border: 1px solid rgba(150, 150, 150, 0.2);
+			background: linear-gradient(to bottom, rgba(221, 102, 158, 0.657), transparent);
+			padding: 2rem;
+			border-radius: 5px;
+			text-align: center;
+			box-shadow: inset 5px 5px 20px rgba(255, 255, 255, 0.1);
+			-webkit-animation: shimmy 6s ease-in-out infinite;
+			animation: shimmy 6s ease-in-out infinite;
+		}
+
+		@-webkit-keyframes shimmy {
+
+			0%,
+			100% {
+				transform: rotateY(0deg) skewX(0deg);
+			}
+
+			50% {
+				transform: rotateY(30deg) skewX(3deg);
+			}
+		}
+
+		@keyframes shimmy {
+
+			0%,
+			100% {
+				transform: rotateY(0deg) skewX(0deg);
+			}
+
+			50% {
+				transform: rotateY(30deg) skewX(3deg);
+			}
+		}
+
+		#footer {
+			background: #ff408c;
+			position: absolute;
+			bottom: 0;
+			padding-top: 0.1rem;
+			font-size: 1rem;
+			width: 100%;
+			height: 2.5rem;
+		}
+
+	</style>
+</head>
+
+<body>
+	<nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+					class="bi bi-telephone-fill" viewBox="0 0 16 16">
+					<path fill-rule="evenodd"
+						d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+				</svg>
+				Retro Phone!
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#history"> History</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#snakeGame"> Snake game</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#ringtone"> Ringtone</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+
+
+	<!-- Intro Section with 3D phone -->
+	<section class="section intro">
+		<div class="card">
+			<h1 class="title">Flip into Nostalgia!</h1>
+			<p class="subtitle">The phone that defined an era</p>
+		</div>
+		<div id="phone-container"></div>
+
+	</section>
+
+	<!-- Parallax Section -->
+	<section class="parallax">
+		<div class="history center" id="history">
+			<h2>History of Motorola Razr V3</h2>
+			<div class="row">
+				<div class="col-5">
+					<!-- https://drive.google.com/uc?export=view&id=1C98_h1c6kVHm9TKlDpxCjTlxkGRGoGiE -->
+					<img src="cuteMotorola.png" alt="Motorola Razr V3"
+						style="width: 100%; max-width: 500px; margin-top: 10px;">
+				</div>
+				<div class="col-6 ">
+					<p>The Motorola Razr V3 was released in 2004 and became an instant hit.</p>
+					<p>It was one of the thinnest phones at that time with a sleek design.</p>
+					<p>It was a status symbol and a fashion statement.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Snake Game Section -->
+	<section class="snake-section">
+		<div class="game-intro" id="snakeGame">
+			<h2>Nostalgic Vibes</h2>
+			<p>Remember the classic Snake game and the small pixelated screen?</p>
+			<p>The game that kept us busy for hours.</p>
+		</div>
+		<div class="row">
+			<div class="col-2">
+				<h4 class="mt-5">Score: <span id="score">0</span></h4>
+			</div>
+			<div class="col-8">
+				<canvas id="snakeCanvas" width="400" height="400"></canvas>
+			</div>
+			<div class="col-2">
+				<h4 class="pt-5"> Use your keys
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+						class="bi bi-arrow-up" viewBox="0 0 16 16">
+						<path fill-rule="evenodd"
+							d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+						class="bi bi-arrow-down" viewBox="0 0 16 16">
+						<path fill-rule="evenodd"
+							d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1" />
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+						class="bi bi-arrow-left" viewBox="0 0 16 16">
+						<path fill-rule="evenodd"
+							d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+					</svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+						class="bi bi-arrow-right" viewBox="0 0 16 16">
+						<path fill-rule="evenodd"
+							d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+					</svg>
+					to control the snake.
+				</h4>
+			</div>
+
+		</div>
+		<button id="restartButton" class="center">Restart Game</button>
+	</section>
+
+	<!-- Ringtone Revival Section -->
+	<section class="section">
+		<h2>Ringtone Revival</h2>
+		<div class="row">
+			<div class="col-5">
+				<img src="Untitled.jpg" alt="Motorola Razr V3"
+					style="width: 100%; max-width: 500px; border-radius: 2%;">
+			</div>
+			<div class="col-7">
+				<div class="card" id="ringtone">
+					<p>Hear the classic ringtone that used to turn heads.</p>
+					<button id="ringtoneButton"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+							fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+							<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+							<path
+								d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+						</svg></button>
+					<button id="stopButton" style="display: none;">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+							class="bi bi-stop-circle" viewBox="0 0 16 16">
+							<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+							<path
+								d="M5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5z" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+		<footer id="footer">
+			<p class="text-center text-white">Build by <a  href="https://www.linkedin.com/in/tatiana-sofia-gomes-lima-1a952117a/">Sofia</a>  🖤</p>
+		</footer>
+
+
+	</section>
+
+	<!-- Include Three.js from a CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<!-- Include GLTFLoader from Three.js examples -->
+	<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+	<script>
+		// Create scene, camera, and renderer
+		const scene = new THREE.Scene();
+		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+		// Enable transparency by setting alpha: true
+		const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+		renderer.setSize(window.innerWidth, 500);  // Set to match the #phone-container height
+
+		// Set background color to transparent
+		renderer.setClearColor(0x000000, 0); // 0 for full transparency
+
+		document.getElementById('phone-container').appendChild(renderer.domElement);
+
+		// Add light to the scene
+		const light = new THREE.DirectionalLight(0xffffff, 1);
+		light.position.set(5, 5, 5);
+		scene.add(light);
+
+		// Load the .glb file using GLTFLoader
+		const loader = new THREE.GLTFLoader();
+		//exchange the image link before sending: https://3d-image-gltats.s3.eu-north-1.amazonaws.com/motorola_razr_cell_phone.glb
+		loader.load('motorola_razr_cell_phone.glb', function (gltf) {
+			const phoneModel = gltf.scene;
+			phoneModel.scale.set(10, 10, 10); // Adjust the scale
+			phoneModel.position.set(0, -2, 0);   // Adjust the position
+			scene.add(phoneModel);
+
+			// Animate the model (optional: rotating the model)
+			const animate = function () {
+				requestAnimationFrame(animate);
+				phoneModel.rotation.y += 0.01; // Rotate around the Y axis
+				renderer.render(scene, camera);
+			};
+			animate();
+		}, undefined, function (error) {
+			console.error(error);
+		});
+
+		// Set the camera position
+		camera.position.z = 5;
+
+		// Handle window resizing
+		window.addEventListener('resize', () => {
+			renderer.setSize(window.innerWidth, 500);  // Keep height fixed at 500px
+			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.updateProjectionMatrix();
+		});
+
+		// Snake Game Initialization
+		const canvas = document.getElementById('snakeCanvas');
+		const ctx = canvas.getContext('2d');
+		const box = 20;
+		let snake = [{ x: 9 * box, y: 10 * box }];
+		let food = {
+			x: Math.floor(Math.random() * 19 + 1) * box,
+			y: Math.floor(Math.random() * 19 + 1) * box
+		};
+		let score = 0;
+		let d;
+		let game;
+
+		document.addEventListener('keydown', direction);
+
+		function direction(event) {
+			if (event.keyCode == 37 && d != 'RIGHT') {
+				d = 'LEFT';
+				event.preventDefault();
+			} else if (event.keyCode == 38 && d != 'DOWN') {
+				d = 'UP';
+				event.preventDefault();
+			} else if (event.keyCode == 39 && d != 'LEFT') {
+				d = 'RIGHT';
+				event.preventDefault();
+			} else if (event.keyCode == 40 && d != 'UP') {
+				d = 'DOWN';
+				event.preventDefault();
+			}
+		}
+
+		function collision(head, array) {
+			for (let i = 0; i < array.length; i++) {
+				if (head.x == array[i].x && head.y == array[i].y) {
+					return true;
+				}
+			}
+			return false;
+		}
+
+
+		function draw() {
+			ctx.fillStyle = '#ff408c';
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+			// Draw border
+			ctx.strokeStyle = 'black';
+			ctx.lineWidth = 2;
+			ctx.strokeRect(0, 0, canvas.width, canvas.height);
+
+			for (let i = 0; i < snake.length; i++) {
+				ctx.fillStyle = (i == 0) ? 'white' : 'black';
+				ctx.fillRect(snake[i].x, snake[i].y, box, box);
+				ctx.strokeStyle = '#ff408c';
+				ctx.strokeRect(snake[i].x, snake[i].y, box, box);
+			}
+			ctx.fillStyle = 'red';
+			ctx.fillRect(food.x, food.y, box, box);
+
+			let snakeX = snake[0].x;
+			let snakeY = snake[0].y;
+
+			if (d == 'LEFT') snakeX -= box;
+			if (d == 'UP') snakeY -= box;
+			if (d == 'RIGHT') snakeX += box;
+			if (d == 'DOWN') snakeY += box;
+
+			if (snakeX == food.x && snakeY == food.y) {
+				score++;
+				document.getElementById('score').innerText = score;
+				food = {
+					x: Math.floor(Math.random() * 19 + 1) * box,
+					y: Math.floor(Math.random() * 19 + 1) * box
+				};
+			} else {
+				snake.pop();
+			}
+
+			let newHead = {
+				x: snakeX,
+				y: snakeY
+			};
+
+			if (snakeX < 0 || snakeY < 0 || snakeX >= canvas.width || snakeY >= canvas.height || collision(newHead, snake)) {
+				clearInterval(game);
+				gameOver();
+			}
+
+			snake.unshift(newHead);
+
+			//ctx.fillStyle = 'white';
+			//ctx.font = '45px Changa one';
+			//ctx.fillText(score, 2 * box, 1.6 * box);
+		}
+		function gameOver() {
+			ctx.fillStyle = 'black';
+			ctx.font = '50px Arial';
+			ctx.fillText('Game Over', canvas.width / 4, canvas.height / 2);
+			document.getElementById('restartButton').style.display = 'block';
+		}
+
+		function restartGame() {
+			snake = [{ x: 9 * box, y: 10 * box }];
+			food = {
+				x: Math.floor(Math.random() * 19 + 1) * box,
+				y: Math.floor(Math.random() * 19 + 1) * box
+			};
+			score = 0;
+			d = null;
+			document.getElementById('score').innerText = score;
+			document.getElementById('restartButton').style.display = 'none';
+			game = setInterval(draw, 100);
+		}
+
+		document.getElementById('restartButton').addEventListener('click', restartGame);
+
+		game = setInterval(draw, 100);
+		// Play Ringtone
+		const ringtoneButton = document.getElementById('ringtoneButton');
+		const stopButton = document.getElementById('stopButton');
+		const ringtone = new Audio('https://2u039f-a.akamaihd.net/downloads/ringtones/files/mp3/hello-moto-26757.mp3');
+
+		ringtoneButton.addEventListener('click', function () {
+			stopButton.style.display = 'block';
+			ringtoneButton.style.display = 'none';
+			ringtone.play();
+		});
+
+		stopButton.addEventListener('click', function () {
+			stopButton.style.display = 'none';
+			ringtoneButton.style.display = 'block';
+			ringtone.pause();
+			ringtone.currentTime = 0;
+		});
+
+	</script>
+</body>
+
+</html>
