@@ -379,7 +379,7 @@
 		// Load the .glb file using GLTFLoader
 		const loader = new THREE.GLTFLoader();
 		//exchange the image link before sending: https://3d-image-gltats.s3.eu-north-1.amazonaws.com/motorola_razr_cell_phone.glb
-		loader.load('https://3d-image-gltats.s3.eu-north-1.amazonaws.com/motorola_razr_cell_phone.glb', function (gltf) {
+		loader.load('https://pixeldrain.com/u/3sFGCTRb', function (gltf) {
 			const phoneModel = gltf.scene;
 			phoneModel.scale.set(10, 10, 10); // Adjust the scale
 			phoneModel.position.set(0, -2, 0);   // Adjust the position
